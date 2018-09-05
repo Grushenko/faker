@@ -5,7 +5,7 @@ import (
 	"math/rand"
 	"strings"
 
-	"github.com/bxcodec/faker/support/slice"
+	"github.com/grushenko/faker/support/slice"
 )
 
 var phone Phoner

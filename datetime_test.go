@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/bxcodec/faker/support/slice"
+	"github.com/grushenko/faker/support/slice"
 )
 
 func TestSetDateTimer(t *testing.T) {

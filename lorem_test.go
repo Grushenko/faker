@@ -1,9 +1,10 @@
 package faker
 
 import (
-	"github.com/bxcodec/faker/support/slice"
 	"strings"
 	"testing"
+
+	"github.com/grushenko/faker/support/slice"
 )
 
 func TestDataFaker(t *testing.T) {

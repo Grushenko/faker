@@ -214,7 +214,12 @@ func getValue(t reflect.Type) (reflect.Value, error) {
 	case reflect.Int32:
 		return reflect.ValueOf(int32(rand.Intn(100))), nil
 	case reflect.Int64:
-		return reflect.ValueOf(int64(rand.Intn(100))), nil
+		switch t.String() {
+		case "time.Duration":
+			return reflect.ValueOf(time.Duration(rand.Intn(100)) * time.Minute), nil
+		default:
+			return reflect.ValueOf(int64(rand.Intn(100))), nil
+		}
 	case reflect.Float32:
 		return reflect.ValueOf(rand.Float32()), nil
 	case reflect.Float64:

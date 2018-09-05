@@ -3,7 +3,7 @@ package faker
 import (
 	"testing"
 
-	"github.com/bxcodec/faker/support/slice"
+	"github.com/grushenko/faker/support/slice"
 )
 
 func TestSetDowser(t *testing.T) {

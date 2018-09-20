@@ -148,8 +148,10 @@ func getValue(t reflect.Type) (reflect.Value, error) {
 
 	switch k {
 	case reflect.Ptr:
-
 		v := reflect.New(t.Elem())
+		if v.Type() == t {
+			return v, nil
+		}
 		val, err := getValue(t.Elem())
 		if err != nil {
 			return reflect.Value{}, err
